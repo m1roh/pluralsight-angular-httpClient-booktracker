@@ -8,6 +8,7 @@ import { throwIfAlreadyLoaded } from 'app/core/module-import-guard';
 import { BookTrackerErrorHandlerService } from './book-tracker-error-handler.service';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AddHeaderInterceptor} from './add-header.interceptor';
+import {BooksResolverService} from './books-resolver.service';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import {AddHeaderInterceptor} from './add-header.interceptor';
   ],
   declarations: [],
   providers: [
+    BooksResolverService,
     LoggerService,
     DataService,
     { provide: ErrorHandler, useClass: BookTrackerErrorHandlerService },

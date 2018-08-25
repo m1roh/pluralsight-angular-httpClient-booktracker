@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Reader } from "app/models/reader";
+import { Reader } from 'app/models/reader';
 
 @Component({
   selector: 'app-add-reader',
@@ -14,7 +14,7 @@ export class AddReaderComponent implements OnInit {
   ngOnInit() { }
 
   saveReader(formValues: any): void {
-    let newReader: Reader = <Reader>formValues;
+    const newReader: Reader = <Reader>formValues;
     newReader.readerID = 0;
     console.log(newReader);
     console.warn('Save new reader not yet implemented.');
